@@ -1,7 +1,18 @@
+@font-face {
+  font-family: FontImport;
+  src: url(../fonts/FE-FONT.TTF)
+}
+
 body {
   text-align: center;
   background-image: url(../img/background.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family: FontImport;
+}
+
+.container {
+  background-color: rgba(245, 245, 220, 0.514);
+  height: 600px;
 }
