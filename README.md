@@ -30,12 +30,39 @@ This application will track the clients that use specific stylists from Hair Sal
 Software Requirements
 1. .NET framework
 2. A code editor (Visual Studio Code, Atom, etc.)
+3. MySQLWorkbench
 
 Acquire The Repo:
 1. Click the 'Clone or Download Button
 2. Alternately, Clone via Bash/GitBash: `git clone {repo}`
 
-Editting the Code Base:
+Database Import:
+1. After configuring a Local SQL instance, open and start the server
+2. Create a new SQL tab for executing Queries and enter the following
+
+```
+DROP DATABASE IF EXISTS `Sean_Downs`;
+CREATE DATABASE `Sean_Downs`;
+
+USE `Sean_Downs`;
+
+CREATE TABLE `Clients` (
+  `ClientId` int(11) NOT NULL AUTO_INCREMENT,
+  `ClientName` varchar(255) DEFAULT NULL,
+  `StylistId` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`ItemId`)
+  CONSTRAINT `FK_Items_Categories_CategoryId` FOREIGN KEY (`CategoryId`) REFERENCES `Categories` (`CategoryId`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `Categories` (
+  `StylistId` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`CategoryId`)
+)  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
+
+
+Editing the Code Base:
 1. Open the project in your code editor; with Bash, this is done by navigating to the project directory, then `code .`
 2. If you wish to run testing, you'll need the testing packages: navigate into the .Tests folder, and run `dotnet restore`
 
