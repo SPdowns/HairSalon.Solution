@@ -78,6 +78,8 @@ Running the program:
 * CSHTML
 * CSS
 * Entity
+* MySQL
+* MySQLWorkBench
 
 
 ### License
