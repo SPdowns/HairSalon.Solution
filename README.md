@@ -61,7 +61,6 @@ CREATE TABLE `Categories` (
 )  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
 
-
 Editing the Code Base:
 1. Open the project in your code editor; with Bash, this is done by navigating to the project directory, then `code .`
 2. If you wish to run testing, you'll need the testing packages: navigate into the .Tests folder, and run `dotnet restore`
@@ -71,8 +70,6 @@ Running the program:
 2. Alternately, you can run the program directly with `dotnet run`.
 
 ## Bugs
-
-Routes aren't connecting in spots
 
 ## Tech used
 
