@@ -1,4 +1,4 @@
-using Microsoft.EntityframeworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace HairSalon.Models
 {
@@ -7,6 +7,6 @@ namespace HairSalon.Models
     public virtual DbSet<Stylist> Stylists { get; set; }
     public DbSet<Client> Clients { get; set; }
 
-    public HairSalonContext(DbContextOption options) : base(options) {}
+    public HairSalonContext(DbContextOptions options) : base(options) {}
   }
 }

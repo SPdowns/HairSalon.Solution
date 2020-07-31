@@ -1,4 +1,4 @@
-using HairSalon.Model;
+using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +16,7 @@ namespace HairSalon.Controllers
     }
     public ActionResult Index()
     {
-      List<Stylist> model = _db.HairSalon.ToList();
+      List<Stylist> model = _db.Stylists.ToList();
       return View(model);
     }
     public ActionResult Create()
@@ -47,7 +47,7 @@ namespace HairSalon.Controllers
       Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
-    [HttpPost, ActionResult("Delete")]
+    [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
       Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
