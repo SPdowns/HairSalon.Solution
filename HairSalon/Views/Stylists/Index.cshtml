@@ -13,7 +13,7 @@
   <h5>No Stylists Work Here Yet</h5>
 }
 
-@foreach (Stylist Stylist in Model)
+@foreach (Stylist stylist in Model)
 {
   <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId})</li>
 }
