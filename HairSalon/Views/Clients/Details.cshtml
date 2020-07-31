@@ -7,6 +7,7 @@
 <h3>Client Details</h3>
 <hr/>
 <h5>Client Name: @Html.DisplayFor(model => model.ClientName)</h5>
+<h5>Client Occupation: @Html.DisplayFor(model => model.ClientJob)</h5>
 <button>@Html.ActionLink("Back to Client List", "Index")</button>
 <button>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId})</button>
 <button>@Html.ActionLink("Delete Item", "Delete", new { id = Model.ClientId}))</button>
