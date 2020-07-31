@@ -6,3 +6,19 @@
 @model HairSalon.Models.Stylist;
 
 <h3>Stylist Details Page</h3>
+
+<h5>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h5>
+
+@if (@Model.Clients.Count == 0)
+{
+  <p>No Clients Patron Here Yet</p>
+}
+<ul>
+@foreach (Client client in @Model.Clients)
+{
+  <li>Client Name: @client.ClientName</li>
+}
+</ul>
+<button>@Html.ActionLink("Back to Stylist List", "Index")</button>
+<button>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.ClientId})</button>
+<button>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.ClientId}))</button>
