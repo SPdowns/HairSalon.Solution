@@ -2,7 +2,7 @@
   Layout = "_Layout";
 }
 
-@model HairSalon.Models.Clients
+@model HairSalon.Models.Client
 
 <h3>Edit</h3>
 <hr/>
@@ -17,7 +17,7 @@
   @Html.LabelFor(model => Stylist)
   @Html.DropDownList("StylistId")
 
-  <input typ="submit" value="Save" />
+  <input type="submit" value="Save" />
 }
 
 <button>@Html.ActionLink("Back to Client list", "Index")</button>
