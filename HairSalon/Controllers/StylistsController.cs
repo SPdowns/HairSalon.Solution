@@ -19,5 +19,9 @@ namespace HairSalon.Controllers
       List<Stylist> model = _db.HairSalon.ToList();
       return View(model);
     }
+    public ActionResult Create()
+    {
+      return View();
+    }
   }
 }
