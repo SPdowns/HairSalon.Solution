@@ -50,14 +50,14 @@ CREATE TABLE `Clients` (
   `ClientId` int(11) NOT NULL AUTO_INCREMENT,
   `ClientName` varchar(255) DEFAULT NULL,
   `StylistId` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`ItemId`)
-  CONSTRAINT `FK_Items_Categories_CategoryId` FOREIGN KEY (`CategoryId`) REFERENCES `Categories` (`CategoryId`) ON DELETE CASCADE
+  PRIMARY KEY (`ClientId`)
+  CONSTRAINT `FK_Clients_Stylists_StylistId` FOREIGN KEY (`StylistId`) REFERENCES `Stylist` (`StylistId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `Categories` (
+CREATE TABLE `Stylist` (
   `StylistId` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`CategoryId`)
+  PRIMARY KEY (`StylistId`)
 )  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
 
